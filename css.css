@@ -1,0 +1,31 @@
+
+* {
+    box-sizing: border-box;
+  }
+
+
+#mivideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+  }
+  .overlay{
+    position: fixed;
+    bottom: 0;
+    background: rgba(166, 170, 168, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+}
+#botonreservar{
+    width: 110px; /* Para que no se rompa en dos líneas, y lo translade tal cual. */
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.boton{
+    width: 33.33%;
+  background-color: tomato
+}
