@@ -12,7 +12,7 @@
     bottom: 0;
     background:rgb(15, 15, 15) ;
     width: 100%;
-    height: 30vh ;
+    height: 20vh ;
     padding: 20px;  
 }
 ul{
@@ -81,7 +81,55 @@ nav ul li span:nth-child(3) {
 nav ul li span:nth-child(4) {
   --n: 4;
 }
+footer{
+  
+  height: 60vh;
+  font-family: roboto;
+  font-weight: 700;
+  background: #3C3B3F;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #605C3C, #3C3B3F);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #605C3C, #3C3B3F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+form{
+  background-color: white;
+  padding: 20px 0;
+  box-shadow: 0 0 6px 0 rgba(255,255,255, 0.8);
+}
+form{
+  width:40%;
+  margin: auto;
+}
+form .grupo{
+  position: relative;
+  
+}
+input{
+  background: none;
+  color: black;
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  margin-left: 10px;
+  display: block;
+  border-color: gray;
+  
+  border-radius: 0.5em;
+}
+label{
+  padding-left: 10px;
+}
+input :focus{
+  outline:none;
+  color: #605C3C;
+}
+
 @media only screen and (max-width: 768px){
+  .overlay{
+    height: 20vh;
+  }
   ul{
     padding-top: 40px;
   }
