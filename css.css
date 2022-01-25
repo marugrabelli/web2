@@ -5,27 +5,120 @@
 
 
 #mivideo {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
+    width: 100%    !important;
+    height: auto   !important;
   }
-  .overlay{
-    position: fixed;
+.overlay {
     bottom: 0;
-    background: rgba(166, 170, 168, 0.5);
-    color: #f1f1f1;
+    background:rgb(15, 15, 15) ;
     width: 100%;
-    padding: 20px;
+    height: 30vh ;
+    padding: 20px;  
 }
-#botonreservar{
-    width: 110px; /* Para que no se rompa en dos líneas, y lo translade tal cual. */
-    margin-left: 50%;
-    transform: translateX(-50%);
+ul{
+  padding-top: 40px;
+}
+li{
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  margin-left:  auto;
+  margin-right: auto;
 }
 
-.boton{
-    width: 33.33%;
-  background-color: tomato
+nav ul li {
+  --c: rgb(173, 144, 70);
+  color: var(--c);
+  font-size: 16px;
+  border: 0.3em solid var(--c);
+  border-radius: 0.5em;
+  width: 12em;
+  height: 4em;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: sans-serif;
+  letter-spacing: 0.1em;
+  text-align: center;
+  line-height: 3em;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: 0.5s;
+    
 }
+ nav ul li span{
+  position: absolute;
+  width: 25%;
+  height: 100%;
+  background-color: var(--c);
+  transform: translateY(150%);
+  
+  left: calc((var(--n) - 1) * 25%);
+  transition: 0.5s;
+  
+  z-index: -1;
+ }
+ nav ul li:hover {
+  color: black;
+}
+
+nav ul li:hover span {
+  transform: translateY(0) scale(2);
+}
+nav ul li span:nth-child(1) {
+  --n: 1;
+}
+
+nav ul li span:nth-child(2) {
+  --n: 2;
+}
+
+nav ul li span:nth-child(3) {
+  --n: 3;
+}
+
+nav ul li span:nth-child(4) {
+  --n: 4;
+}
+@media only screen and (max-width: 768px){
+  ul{
+    padding-top: 40px;
+  }
+  nav ul li {
+      width: 7em;
+      height: 3em;
+      line-height: 2em;
+      font-size: 12px;
+      
+    }
+@media only screen and (max-width:400px) {
+  #mivideo{
+    width: 100% !important;
+    
+  }
+.overlay{
+    
+    height: 20vh;
+    
+    
+  }
+  ul{
+    padding-top: 20px;
+  }
+  nav ul li {
+    width: 12em;
+    height: 4em;
+    line-height: 3em;
+    font-size: 8px;
+    margin-left:90px;
+    
+    
+  }
+}
+  
+
+
+
+
+
