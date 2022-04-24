@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css  ">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet">
+    <title>Web para 2 con Css</title>
+</head>
+<body>
+   <!-- menu -->  
+<nav>
+  <ul>
+    <li><a href="https://www.wikipedia.org"> Nosotors</a>  </li>
+    <li><a href="https://www.wikipedia.org"> entradas</a> </li>
+    <li><a href="https://www.wikipedia.org">contacto </a></li>
+  </ul>
+</nav>
+    <header class="header-content">
+        <!-- video ppal-->  
+            <video autoplay muted loop id="mivideo">
+                <source src="2.mp4" type="video/mp4"></video> 
+       
+        <!-- reservar boton -->
+            <nav class="overlay">
+            <div class="btnreservar">
+            <button  id="btn" type="submit" onclick="openForm()"> Reservar</button>
+            <div class="form-popup" id="myForm">
+                <form action="" class="form-container">
+                  <h1>Reservar entradas</h1>
+              
+                  <label for="email"><b>Email</b></label>
+                  <input type="text" placeholder="Deja tu correo" name="email" required>
+              
+                  <label for="psw"><b>Seleccionar funcion del sabado</b></label>
+                  <input type="date" name="fecha"  min="2022-06-01" max="2022-08-31"required>
+              
+                  <button type="submit" class="btn" id="btnabrir"onclick="openPopup()" >Iniciar reserva</button>
+                  <div class="modal-container" id="modal_container">
+                    <div class="modal" >
+                  <h1>popup</h1>
+                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat, accusantium! 
+                    Tempora sed veritatis numquam? Iste, dignissimos error mollitia autem expedita nulla
+                     quibusdam delectus et beatae, dolor eum, vitae non minima?
+                  Id, a veritatis voluptates accusantium, sequi, atque obcaecati nisi nulla repellendus 
+                  nostrum iure! At tempora mollitia optio, quibusdam laboriosam beatae aliquam? Consequuntur 
+                  rem animi dolores id aperiam a quisquam nisi!</p>
+                  <button id="btncerrar" onclick="closePopup()">
+                    cerrar
+                  </button>
+                </div>
+                  </div>
+                     
+                     
+                     
+                  <button type="button" class="btn cancel" onclick="closeForm()">Cancelar</button>
+                </form>
+              </div>
+            
+        </div>
+     
+
+        </div>
+        
+            
+            </nav>
+      
+    </header>
+     <!--Pie de pagina-->
+        <footer>
+           
+                          
+            <div class="iconosfooter">
+                <span >
+                
+                <span class=”redes”></span>
+                <a href="https://www.facebook.com/"><img alt="fb" class="iconos" src="iconos/fb.png"></a>
+                <a href="https://instagram.com"><img alt="Insta" class="iconos" src="iconos/insta.png"></a>
+                <a href="https://www.linkedin.com/"><img alt="In" class="iconos" src="iconos/in.png"></a>
+                </span>
+                
+                </div>
+         
+        </footer>
+        <script>
+          /*
+          const btnabrir=document.getElementById("btnabrir");
+            const modal_container=document.getElementById("modal_container");
+            const btncerrar=document.getElementById("btncerrar");*/
+            function openForm() {
+              document.getElementById("myForm").style.display = "block";
+            }
+            
+            function closeForm() {
+              document.getElementById("myForm").style.display = "none";
+            }
+            /*
+            btnabrir.addEventListener("click",()=>{modal_container.classList.add("show")});
+            btncerrar.addEventListener("click",()=>{modal_container.classList.remove("show")});*/
+            function openPopup() {
+              document.getElementById("modal_container").style.display = "block";
+            }
+            
+            function closePopup() {
+              document.getElementById("modal_container").style.display = "none";
+            }
+            var nav = document.getElementById('nav');
+var navlinks = nav.getElementsByTagName('a');
+
+function toggleNav() {
+    (nav.classList.contains('active')) ? nav.classList.remove('active') : nav.classList.add('active');
+  }
+
+document.getElementById('nav-icon').addEventListener('click', function(e) {
+    e.preventDefault();
+    toggleNav();
+});
+
+for(var i = 0; i < navlinks.length; i++) {
+    navlinks[i].addEventListener('click', function() {
+      toggleNav();
+  });
+}
+            </script>
+</body>
+</html>
+
+
+   
+
+ 
+    
